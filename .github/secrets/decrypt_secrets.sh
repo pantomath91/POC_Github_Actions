@@ -1,12 +1,12 @@
 #!/bin/sh
 set -eo pipefail
 
-gpg --quiet --batch --yes --decrypt --passphrase="$IOS_KEYS" --output ./.github/secrets/poccalculator.mobileprovision.gpg ./.github/secrets/poccalculator.mobileprovision.gpg
+gpg --quiet --batch --yes --decrypt --passphrase="$IOS_KEYS" --output ./.github/secrets/comnetspendpoccalculator.mobileprovision.gpg ./.github/secrets/comnetspendpoccalculator.mobileprovision.gpg
 gpg --quiet --batch --yes --decrypt --passphrase="$IOS_KEYS" --output ./.github/secrets/ios_distribution.cer.gpg ./.github/secrets/ios_distribution.cer.gpg
 
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
 
-cp ./.github/secrets/poccalculator.mobileprovision.gpg ~/Library/MobileDevice/Provisioning\ Profiles/poccalculator.mobileprovision.gpg
+cp ./.github/secrets/poccalculator.mobileprovision.gpg ~/Library/MobileDevice/Provisioning\ Profiles/comnetspendpoccalculator.mobileprovision.gpg
 
 
 security create-keychain -p "" build.keychain

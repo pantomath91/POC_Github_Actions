@@ -6,7 +6,7 @@ gpg --quiet --batch --yes --decrypt --passphrase="$IOS_KEYS" --output ./.github/
 
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
 
-cp ./.github/secrets/poccalculator.mobileprovision.gpg ~/Library/MobileDevice/Provisioning\ Profiles/comnetspendpoccalculator.mobileprovision.gpg
+cp ./.github/secrets/comnetspendpoccalculator.mobileprovision.gpg ~/Library/MobileDevice/Provisioning\ Profiles/comnetspendpoccalculator.mobileprovision.gpg
 
 
 security create-keychain -p "" build.keychain
